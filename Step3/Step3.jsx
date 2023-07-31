@@ -2,13 +2,13 @@ import { Button, useMediaQuery } from "@mui/material";
 import React from "react";
 
 function StepThree() {
-  const isLg = useMediaQuery("(min-width:1335px)");
+  const isLg = useMediaQuery("(min-width:1024px)");
   return (
     <div>
-      <div className="items-center my-[50px]  lg:px-[44px] lg:mx-9  lg:border lg:border-[#707070] lg:rounded-[12px]">
+      <div className="items-center my-[50px]  lg:mb-[15px] py-[20px] lg:px-[44px] px-[8px] lg:mx-9 mx-4 border border-[#707070] rounded-[8px] lg:border lg:border-[#707070] lg:rounded-[12px] leading-[1.75]">
         <div className="flex relative justify-center items-center">
-          <div className=" z-0 flex flex-col justify-center lg:mt-[200px] md:mt-[50px] sm:mt-[10px] mt-[10px] lg:mx-0 mx-2 lg:pr-[30px] pr-[20px] text-[#0A0A0A]  w-full bg-[#359DD5] lg:rounded-[18px] rounded-[12px] lg:h-[193px] h-[83px] lg:ml-[100px]">
-            <h3 className="lg:text-[40px] md:text-[22px] font-bold mb-[10px]">
+          <div className=" z-0 flex flex-col justify-center lg:mt-[200px] md:mt-[100px] mt-[100px] lg:mx-0 mx-2 lg:pr-[30px] pr-[20px] text-[#0A0A0A] w-full bg-[#359DD5] lg:rounded-[18px] rounded-[12px] lg:h-[193px] h-[83px] lg:ml-[100px] ml-[100px]">
+            <h3 className="lg:text-[40px] text-[16px] font-bold mb-[10px]">
               لیست مدارک مورد نیاز:
             </h3>
           </div>
@@ -22,10 +22,17 @@ function StepThree() {
               />
             </div>
           ) : (
-            <></>
+            <div className="absolute top-0 left-5 z-10">
+              <img
+                src="/images/mobile3s.svg"
+                alt=""
+                loading="lazy"
+                className="object-cover h-[261px] w-full z-10"
+              />
+            </div>
           )}
         </div>
-        <div className="lg:pr-[30px] lg:mx-0 lg:px-0 mx-3 px-[15px] lg:text-[25px] text-[15px] my-[15px] text-[#0A0A0A] leading-[1.85]">
+        <div className="lg:pr-[30px] lg:mx-0 lg:px-0 mx-3 px-[15px] lg:text-[25px] md:text-[15px] text-[13px] my-[15px] text-[#0A0A0A] leading-[1.85] mt-[75px]">
           <h3 className=" font-bold">مدارک شناسایی:</h3>
           <span>
             شناسنامه به همراه کپی از تمام صفحات
@@ -113,14 +120,14 @@ function StepThree() {
               },
               fontSize: {
                 lg: "21px !important",
-                md: "15px !important",
-                sm: "15px !important",
+                md: "10px !important",
+                sm: "10px !important",
               },
               p: "10px !important",
-              mb:"30px"
+              border: "2px solid #3E81E6",
             }}
           >
-            دریافت فایل لیست مدارک مورد نیاز
+            دریافت لیست مدارک
           </Button>
         </div>
       </div>
@@ -129,93 +136,3 @@ function StepThree() {
 }
 
 export default StepThree;
-
-/* 
-<div className="border-t border-black py-6">
-<div className="flex relative justify-center items-center h-[67px] font-bold w-full bg-[#4066FF] text-3xl text-[#FFFFFF]">
-  <img
-    src="images/num3.svg"
-    alt=""
-    loading="lazy"
-    className="absolute bottom-0 right-4"
-  />
-  <p> پرداخت و دریافت مدارک </p>
-</div>
-<div className="grid gap-5 grid-cols-1 lg:grid-cols-6 xl:grid-cols-6 bg-[#F8F8F8] p-[30px]">
-  <div className="col-span-2">
-    <div className="flex flex-col text-base">
-      <div className="flex flex-col gap-3">
-        <div className="text-[#FF8000]">
-          <p>الزامی</p>
-        </div>
-        <div className="flex justify-between items-center text-[#4066FF]">
-          <p>هزینه پوشه مدارک</p>
-          <p>70000تومان</p>
-        </div>
-      </div>
-      <div className="flex flex-col gap-3 text-base mt-[13px]">
-        <input type="text" name="" id="" className="h-[67px]" />
-      </div>
-      <div className="w-full mt-[35px]">
-        <Button
-          variant="contained"
-          sx={{
-            width: "100%",
-            height: "67px !important",
-            fontSize: "30px !important",
-            backgroundColor: "#4066FF",
-            mt: "15px",
-            borderRadius:"5px"
-          }}
-        >
-          پرداخت
-        </Button>
-      </div>
-    </div>
-  </div>
-  <div className="col-span-2 mt-[30px]">
-    <div className="flex justify-between items-center text-[#4066FF]">
-      <p> هزینه اعتبارسنجی</p>
-      <p>70000تومان</p>
-    </div>
-    <div className="flex flex-col gap-3 text-base mt-[13px]">
-      <input type="text" name="" id="" className="h-[67px]" />
-    </div>
-    <div className="w-full mt-[35px]">
-      <Button
-        variant="contained"
-        sx={{
-          width: "100%",
-          height: "67px !important",
-          fontSize: "30px !important",
-          backgroundColor: "#4066FF",
-          mt: "15px",
-          borderRadius:"5px"
-        }}
-      >
-        پرداخت
-      </Button>
-    </div>
-  </div>
-  <div className="col-span-1 flex flex-col justify-end w-full">
-  <div className="w-full">
-      <Button
-        variant="contained"
-        sx={{
-          width: "100% !important",
-          height: "67px !important",
-          fontSize: "30px !important",
-          backgroundColor: "#40BEA7",
-          mt: "15px",
-          borderRadius:"5px"
-        }}
-      >
-        دانلود مدارک
-      </Button>
-    </div>
-  </div>
-  <div className="col-span-1 hidden lg:block xl:block">
-    <img src="/images/pic3.svg" alt="" loading="lazy" />
-  </div>
-</div>
-</div> */
